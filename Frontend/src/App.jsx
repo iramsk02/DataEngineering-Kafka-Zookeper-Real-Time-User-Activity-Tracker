@@ -1,14 +1,17 @@
 // src/App.jsx
 import './App.css';
 import ActivityTracker from './Pages/ActivityTracker';
+import Dashboard from './Pages/Dashboard';
+import {  Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <ActivityTracker />
-      {/* You would typically wrap your entire application content with this tracker component
-          or integrate the logic into a custom hook that runs once per page view/route change. */}
-    </div>
+    <Routes>   
+        <Route path="/" element={<ActivityTracker />} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+
+    </Routes>
+
   );
 }
 

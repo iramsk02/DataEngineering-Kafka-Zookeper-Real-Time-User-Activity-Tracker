@@ -49,6 +49,16 @@ services:
     environment:
       KAFKA_BROKER: kafka:9092
       MONGO_URL: mongodb://mongo:27017/tracker
+  dashboard-api:
+    build: backend/dashboard
+    container_name: dashboard-api
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/tracker
+    ports:
+      - "5000:5000"
+
 
 volumes:
   mongo_data:
