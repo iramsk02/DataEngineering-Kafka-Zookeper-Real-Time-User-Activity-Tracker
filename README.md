@@ -115,5 +115,3 @@ docker-compose down
 ```
 
 ---
-
-If you'd like this converted to **HTML markup**, **README formatting**, or a **canvas document**, just let me know!
