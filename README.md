@@ -24,7 +24,7 @@ The system follows an **event-driven architecture** composed of:
 
 ### 1. Frontend (Client)
 
-A simple HTML/JavaScript web page that registers user activities as JSON events.
+A simple React web page that registers user activities as JSON events with a Dashboard.
 
 ### 2. Backend Producer (Node.js)
 
@@ -49,13 +49,13 @@ A Node.js service that consumes messages from Kafka, processes them, and sends u
 | Cluster Management | Apache ZooKeeper       | Kafka coordination                    |
 | Containerization   | Docker, Docker Compose | Deploy all services                   |
 | Backend            | Node.js                | Kafka Producer & Consumer             |
-| Frontend           | HTML, JavaScript, CSS  | Event generation & dashboard          |
+| Frontend           | React                  | Event generation & dashboard          |
 
 ---
 
 ## 🚀 How to Run the Application
 
-This project is fully containerized with Docker.
+This project is fully containerised with Docker.
 
 ### **Prerequisites**
 
@@ -71,6 +71,7 @@ This project is fully containerized with Docker.
 ```bash
 git clone https://github.com/iramsk02/DataEngineering-Kafka-Zookeper-Real-Time-User-Activity-Tracker.git
 cd DataEngineering-Kafka-Zookeper-Real-Time-User-Activity-Tracker
+cd Backend
 ```
 
 #### 2. Start the Services
@@ -81,15 +82,21 @@ Build and start all services:
 docker-compose up --build -d
 ```
 
-Wait a few moments for Kafka and ZooKeeper to initialize.
+Wait a few moments for Kafka and ZooKeeper to initialise.
 
 #### 3. Access the Application
 
 Open your browser:
 
 * **Frontend User Activity Page:**
-  [http://localhost:80](http://localhost:80)
-  (or the port configured in `docker-compose.yml`)
+```bash
+cd DataEngineering-Kafka-Zookeper-Real-Time-User-Activity-Tracker
+cd Backend
+```
+```bash
+npm run dev
+```
+  [http://localhost:5173](http://localhost:5173)
 
 #### 4. Verify Data Flow
 
@@ -97,6 +104,7 @@ Open your browser:
 * Check Producer logs: messages should be sent to Kafka.
 * Check Consumer logs: events should be processed in real time.
 * Frontend dashboard should update instantly.
+* [http://localhost:5173](http://localhost:5173/dashboard)
 
 ---
 
