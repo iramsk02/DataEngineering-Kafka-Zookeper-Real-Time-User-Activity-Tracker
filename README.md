@@ -104,7 +104,7 @@ npm run dev
 * Check Producer logs: messages should be sent to Kafka.
 * Check Consumer logs: events should be processed in real time.
 * Frontend dashboard should update instantly.
-* [http://localhost:5173](http://localhost:5173/dashboard)
+* [http://localhost:5173/dashboard](http://localhost:5173/dashboard)
 
 ---
 
