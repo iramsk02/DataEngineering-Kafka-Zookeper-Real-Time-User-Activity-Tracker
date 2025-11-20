@@ -2,7 +2,7 @@
 # Real-Time User Activity Tracker
 
 🌟 **Overview**
-This project implements a complete, containerized, real-time data pipeline for tracking and visualizing user activity (e.g., clicks, page views, session data) on a website. It leverages core Data Engineering technologies like **Kafka** and **ZooKeeper** to ensure highly available, fault-tolerant, and scalable data ingestion.
+This project implements a complete, containerized, real-time data pipeline for tracking and visualizing user activity (e.g., clicks, page views, session data) on a website. It leverages core Data Engineering technologies like **Kafka**  to ensure highly available, fault-tolerant, and scalable data ingestion.
 
 The system uses an event-driven architecture to instantly stream user events from the frontend, through Kafka, to a backend consumer for processing and real-time visualization.
 
